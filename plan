@@ -1,0 +1,30 @@
+User? [ Customer - Employee ]
+-----------------------------
+Customer 
+1. [Rent - Buy]
+2. Display Cars for Rent/Buy.
+3. Choose a car
+4. Data
+5. Payment Method [2 Options]
+-----------------------------
+Car
+1. Data
+---------
+A) Rented
+B) Buy
+-----------------------------
+Employee
+1. Add a Car for [Rent - Buy]
+2. Display Customers
+
+
+
+
+
+To-do:
+
+A)Employee Menu
+1. [67 - 93] : Array of Objects.
+2. Display Customers.
+3. [13] Try & Catch.
+
