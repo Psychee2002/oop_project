@@ -8,6 +8,10 @@ public class Customer extends Human
     {
         super(name, email, address, nationalIdentificationNumber, phoneNumber);
     }
+    public Customer(String name, String email, String address, int nationalIdentificationNumber, int phoneNumber, double abilityToBuyRange){
+        super(name, email, address, nationalIdentificationNumber, phoneNumber);
+        this.abilityToBuyRange = abilityToBuyRange;
+    }
 
     // Getters & Setters
     public double getAbilityToBuyRange() 

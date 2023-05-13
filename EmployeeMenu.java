@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class EmployeeMenu
 {
     static Scanner input = new Scanner(System.in);
-
+    static int carsCount;
     public static void display()
     {
         Employee.login();
@@ -22,7 +22,7 @@ public class EmployeeMenu
         if (choice == 1) 
         {
             System.out.println("How many cars are you adding?");
-            int carsCount = input.nextInt();
+            carsCount = input.nextInt();
 
             // Arrays
             String[] model = new String[carsCount];
@@ -70,7 +70,7 @@ public class EmployeeMenu
 
             else if (choice1 == 2) 
             {
-                for (int i = 0; i < carsCount; i++) 
+                for (int i = 1 ; i <= carsCount; i++) 
                 {
                     System.out.println("Enter Model: ");
                     model[i] = input.next();
@@ -92,7 +92,6 @@ public class EmployeeMenu
 
                     Sold car = new Sold(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i]);
                 }
-            }
         }
 
         // Display Customers
@@ -100,5 +99,18 @@ public class EmployeeMenu
         {
             
         }
+        //public void displayRentalMenu(){
+           // for (int i = 1; i <= carsCount; i++) 
+           // {
+               // System.out.println("Car" + i + model[i]); 
+               // System.out.println("Model: " + model[i]);    
+                //System.out.println("Color: " + color[i]);    
+                //System.out.println("Fuel Type: " + fuelType[i]);    
+                //System.out.println("Body Style: " + bodyStyle[i]);    
+                //System.out.println("Number of seats: " +numberOfSeats[i]);    
+                //System.out.println("Year: " + year[i]);
+       // }
+   // }
     }
+}
 }

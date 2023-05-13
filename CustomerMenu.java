@@ -8,17 +8,26 @@ public class CustomerMenu
     {
         System.out.println("Rent or Buy?");
         String answer = input.next();
-
+        EmployeeMenu rentalMenu = new EmployeeMenu();
         if (answer.toLowerCase().equals("rent")) 
         {
             // display rentable cars
             System.out.println("Here is the Rental Menu: ");
+            //EmployeeMenu.displayRentalMenu();
+            
+            // input
+            System.out.println("Which Car would you like to Rent?");
+            int selectionR = input.nextInt();
+        }
+        else if (answer.toLowerCase().equals("buy")) 
+        {
+            // display Sale cars
+            System.out.println("Here is the Sale Menu: ");
 
             // input
-            System.out.println("Which Car do you like to Rent?");
-            int selection = input.nextInt();
+            System.out.println("Which Car would you like to Buy?");
+            int selectionB = input.nextInt();
         }
-
         // Creates a customer profile.
         System.out.println("Name");
         String name = input.next();
@@ -37,9 +46,9 @@ public class CustomerMenu
 
         System.out.println("Payment Range");
         Double abilityToBuyRange = input.nextDouble();
-
+        
         Customer customer = new Customer(name, email, address, nationalIdentificationNumber, phoneNumber);
-
+        
         // Display Data
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Your Data");

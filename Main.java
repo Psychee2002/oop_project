@@ -26,8 +26,8 @@ public class Main
         } while (choice != 1 && choice != 2);
 
         if (choice == 1)
-            EmployeeMenu.display();
+        CustomerMenu.display();
         else
-            CustomerMenu.display();
+        EmployeeMenu.display();
     }
 }
