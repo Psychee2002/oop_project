@@ -14,7 +14,9 @@ public class CustomerMenu
             // display rentable cars
             System.out.println("Here is the Rental Menu: ");
             //EmployeeMenu.displayRentalMenu();
-            
+            for (int i = 0; i < EmployeeMenu.carsCount; i++) {
+                Rental.displayRentalMenu(EmployeeMenu.model[i], EmployeeMenu.year[i], EmployeeMenu.color[i], EmployeeMenu.bodyStyle[i], EmployeeMenu.fuelType[i], EmployeeMenu.numberOfSeats[i] , EmployeeMenu.carsCount,i );
+            }
             // input
             System.out.println("Which Car would you like to Rent?");
             int selectionR = input.nextInt();
@@ -28,7 +30,9 @@ public class CustomerMenu
         {
             // display Sale cars
             System.out.println("Here is the Sale Menu: ");
-
+            for (int i = 0; i < EmployeeMenu.carsCount; i++) {
+                Sold.displaySaleMenu(EmployeeMenu.model[i], EmployeeMenu.year[i], EmployeeMenu.color[i], EmployeeMenu.bodyStyle[i], EmployeeMenu.fuelType[i], EmployeeMenu.numberOfSeats[i] , EmployeeMenu.carsCount,i );
+            }
             // input
             System.out.println("Which Car would you like to Buy?");
             int selectionB = input.nextInt();

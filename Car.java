@@ -1,6 +1,6 @@
 public class Car 
 {
-    private String model;
+    private static String model;
     private int year;
     private String color;
     private String bodyStyle;
@@ -19,7 +19,7 @@ public class Car
     }
 
     // Getters & Setters
-    public String getModel() 
+    public static String getModel() 
     {
         return model;
     }

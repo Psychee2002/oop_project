@@ -4,6 +4,16 @@ public class EmployeeMenu
 {
     static Scanner input = new Scanner(System.in);
     static int carsCount;
+    
+            // Arrays
+            static String[] model = new String[carsCount];
+            static String[] color = new String[carsCount];
+            static String[] fuelType = new String[carsCount];
+            static String[] bodyStyle = new String[carsCount];
+
+            static int[] numberOfSeats = new int[carsCount];
+            static int[] year = new int[carsCount];
+
     public static void display()
     {
         Employee.login();
@@ -23,16 +33,6 @@ public class EmployeeMenu
         {
             System.out.println("How many cars are you adding?");
             carsCount = input.nextInt();
-
-            // Arrays
-            String[] model = new String[carsCount];
-            String[] color = new String[carsCount];
-            String[] fuelType = new String[carsCount];
-            String[] bodyStyle = new String[carsCount];
-
-            int[] numberOfSeats = new int[carsCount];
-            int[] year = new int[carsCount];
-
             System.out.println("Which menu are you adding to?");
             int choice1;
             do 
@@ -65,6 +65,7 @@ public class EmployeeMenu
                     year[i] = input.nextInt();
 
                     Rental car = new Rental(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i]);
+                    Rental.displayRentalMenu(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i] , carsCount);
                 }
             }
 
@@ -91,6 +92,8 @@ public class EmployeeMenu
                     year[i] = input.nextInt();
 
                     Sold car = new Sold(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i]);
+                    Sold.displaySaleMenu(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i] , carsCount,i);
+
                 }
         }
 
@@ -99,18 +102,6 @@ public class EmployeeMenu
         {
             
         }
-        //public void displayRentalMenu(){
-           // for (int i = 1; i <= carsCount; i++) 
-           // {
-               // System.out.println("Car" + i + model[i]); 
-               // System.out.println("Model: " + model[i]);    
-                //System.out.println("Color: " + color[i]);    
-                //System.out.println("Fuel Type: " + fuelType[i]);    
-                //System.out.println("Body Style: " + bodyStyle[i]);    
-                //System.out.println("Number of seats: " +numberOfSeats[i]);    
-                //System.out.println("Year: " + year[i]);
-       // }
-   // }
     }
 }
 }
