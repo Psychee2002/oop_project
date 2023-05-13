@@ -17,9 +17,11 @@ public class CustomerMenu
             for (int i = 0; i < EmployeeMenu.carsCount; i++) {
                 Rental.displayRentalMenu(EmployeeMenu.model[i], EmployeeMenu.year[i], EmployeeMenu.color[i], EmployeeMenu.bodyStyle[i], EmployeeMenu.fuelType[i], EmployeeMenu.numberOfSeats[i] , EmployeeMenu.carsCount,i );
             }
+            Rental.defaultRMenu();
             // input
             System.out.println("Which Car would you like to Rent?");
             int selectionR = input.nextInt();
+            Rental.RentCalc(selectionR);
             System.out.println("Your Selection is "+ selectionR);
             System.out.println("How many Days would you like to rent this car for?");
             int rentaldays = input.nextInt();
@@ -33,12 +35,11 @@ public class CustomerMenu
             for (int i = 0; i < EmployeeMenu.carsCount; i++) {
                 Sold.displaySaleMenu(EmployeeMenu.model[i], EmployeeMenu.year[i], EmployeeMenu.color[i], EmployeeMenu.bodyStyle[i], EmployeeMenu.fuelType[i], EmployeeMenu.numberOfSeats[i] , EmployeeMenu.carsCount,i );
             }
+            Sold.defaultSMenu();
             // input
             System.out.println("Which Car would you like to Buy?");
             int selectionB = input.nextInt();
-            System.out.println("Your Selection is "+ selectionB);
-            System.out.println("What's your payment range? Enter a number from 500000 to 1000000");
-            Double paymentRange = input.nextDouble();
+            Sold.soldCalc(selectionB);
 
         }
         // Creates a customer profile.
