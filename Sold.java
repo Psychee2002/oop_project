@@ -9,4 +9,5 @@ public class Sold extends Car
         super(model, year, color, bodyStyle, fuelType, numberOfSeats);
         count--;
     }
+    
 }
