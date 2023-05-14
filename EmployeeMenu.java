@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class EmployeeMenu
@@ -19,18 +20,21 @@ public class EmployeeMenu
         Employee.login();
         
         System.out.println("1. Add Car");
-        System.out.println("2. Display Customers?");
-
         // to-do : add try & catch
-        int choice;
+        int choice =0;
         do 
         {
+            try{
             choice = input.nextInt();
-        } while (choice != 1 && choice != 2);
+            }
+            catch( InputMismatchException exception)
+            {
+            System.out.println("Expected an int");
+            input.next();
+            }
+        } while (choice != 1);
 
         // Add Car
-        if (choice == 1) 
-        {
             System.out.println("How many cars are you adding?");
             carsCount = input.nextInt();
             System.out.println("Which menu are you adding to?");
@@ -46,6 +50,7 @@ public class EmployeeMenu
             {
                 for (int i = 0; i < carsCount; i++) 
                 {
+                    try {
                     System.out.println("Enter Model: ");
                     model[i] = input.next();
 
@@ -66,6 +71,12 @@ public class EmployeeMenu
 
                     Rental car = new Rental(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i]);
                     Rental.displayRentalMenu(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i] , carsCount);
+                    }
+                    catch( InputMismatchException exception)
+                    {
+                    System.out.println("invalid input Type");
+                    input.next();
+                    }
                 }
             }
 
@@ -73,6 +84,7 @@ public class EmployeeMenu
             {
                 for (int i = 1 ; i <= carsCount; i++) 
                 {
+                    try {
                     System.out.println("Enter Model: ");
                     model[i] = input.next();
 
@@ -93,15 +105,18 @@ public class EmployeeMenu
 
                     Sold car = new Sold(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i]);
                     Sold.displaySaleMenu(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i] , carsCount,i);
+                    }
+                    
+                    catch( InputMismatchException exception)
+                    {
+                    System.out.println("invalid input Type");
+                    input.next();
+                    }
 
                 }
         }
-
-        // Display Customers
-        else if (choice == 2)
-        {
             
         }
     }
-}
-}
+
+
