@@ -20,7 +20,6 @@ public class EmployeeMenu
         Employee.login();
         
         System.out.println("1. Add Car");
-        // to-do : add try & catch
         int choice =0;
         do 
         {
@@ -34,9 +33,18 @@ public class EmployeeMenu
             }
         } while (choice != 1);
 
-        // Add Car
+            // Add Car
             System.out.println("How many cars are you adding?");
             carsCount = input.nextInt();
+             // Arrays
+            model = new String[carsCount];
+            color = new String[carsCount];
+            fuelType = new String[carsCount];
+            bodyStyle = new String[carsCount];
+
+            numberOfSeats = new int[carsCount];
+            year = new int[carsCount];
+
             System.out.println("Which menu are you adding to?");
             int choice1;
             do 
@@ -45,12 +53,18 @@ public class EmployeeMenu
                 System.out.println("2. Sale");
                 choice1 = input.nextInt();
             } while (choice1 != 1 && choice1 != 2);
-
             if (choice1 == 1) 
             {
                 for (int i = 0; i < carsCount; i++) 
                 {
                     try {
+                    
+                    System.out.println("Enter Number of seats: ");
+                    numberOfSeats[i] = input.nextInt();
+
+                    System.out.println("Enter Year: ");
+                    year[i] = input.nextInt();
+
                     System.out.println("Enter Model: ");
                     model[i] = input.next();
 
@@ -63,16 +77,21 @@ public class EmployeeMenu
                     System.out.println("Enter Body Style: ");
                     bodyStyle[i] = input.next();
 
-                    System.out.println("Enter Number of seats: ");
-                    numberOfSeats[i] = input.nextInt();
-
-                    System.out.println("Enter Year: ");
-                    year[i] = input.nextInt();
-
                     Rental car = new Rental(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i]);
                     Rental.displayRentalMenu(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i] , carsCount);
+                      //display menu
+                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        System.out.println("You added car " + i++);
+                        System.out.println("model: " +model [i]);
+                        System.out.println("color: " +color [i]);
+                        System.out.println("Fuel type: " + fuelType[i]);
+                        System.out.println("body style: " +bodyStyle [i]);
+                        System.out.println("number of seats: " +numberOfSeats [i]);
+                        System.out.println("Year: " + year[i]);
+                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
                     }
-                    catch( InputMismatchException exception)
+                    catch(Exception exception)
                     {
                     System.out.println("invalid input Type");
                     input.next();
@@ -82,7 +101,7 @@ public class EmployeeMenu
 
             else if (choice1 == 2) 
             {
-                for (int i = 1 ; i <= carsCount; i++) 
+                for (int i = 0 ; i < carsCount; i++) 
                 {
                     try {
                     System.out.println("Enter Model: ");
@@ -105,17 +124,26 @@ public class EmployeeMenu
 
                     Sold car = new Sold(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i]);
                     Sold.displaySaleMenu(model[i], year[i], color[i], bodyStyle[i], fuelType[i], numberOfSeats[i] , carsCount,i);
+
+                    //display menu
+                    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    System.out.println("You added car " + i++);
+                    System.out.println("model: " +model [i]);
+                    System.out.println("color: " +color [i]);
+                    System.out.println("Fuel type: " + fuelType[i]);
+                    System.out.println("body style: " +bodyStyle [i]);
+                    System.out.println("number of seats: " +numberOfSeats [i]);
+                    System.out.println("Year: " + year[i]);
+                    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                     }
                     
-                    catch( InputMismatchException exception)
+                    catch(Exception exception)
                     {
                     System.out.println("invalid input Type");
                     input.next();
                     }
-
                 }
         }
-            
         }
     }
 

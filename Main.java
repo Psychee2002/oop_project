@@ -20,7 +20,6 @@ public class Main
             catch( InputMismatchException exception)
             {
                 System.out.println("Expected an Integer");
-                // Clears the buffer
                 input.next();
             }
         } while (choice != 1 && choice != 2);

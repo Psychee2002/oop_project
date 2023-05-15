@@ -13,7 +13,6 @@ public class CustomerMenu
         {
             // display rentable cars
             System.out.println("Here is the Rental Menu: ");
-            //EmployeeMenu.displayRentalMenu();
             for (int i = 0; i < EmployeeMenu.carsCount; i++) {
                 Rental.displayRentalMenu(EmployeeMenu.model[i], EmployeeMenu.year[i], EmployeeMenu.color[i], EmployeeMenu.bodyStyle[i], EmployeeMenu.fuelType[i], EmployeeMenu.numberOfSeats[i] , EmployeeMenu.carsCount,i );
             }
@@ -42,7 +41,7 @@ public class CustomerMenu
             Sold.soldCalc(selectionB);
 
         }
-        // Creates a customer profile.
+        //customer profile
         System.out.println("Name");
         String name = input.next();
 

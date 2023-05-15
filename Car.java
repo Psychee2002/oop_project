@@ -18,7 +18,6 @@ public class Car
         this.numberOfSeats = numberOfSeats;
     }
 
-    // Getters & Setters
     public static String getModel() 
     {
         return model;

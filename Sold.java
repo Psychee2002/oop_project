@@ -1,6 +1,5 @@
 public class Sold extends Car
 {
-    // Attributes
     private static int count = 10;
 
     // Constructor

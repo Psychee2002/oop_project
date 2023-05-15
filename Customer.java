@@ -1,6 +1,5 @@
 public class Customer extends Human 
 {
-    // Attributes
     private double abilityToBuyRange;
 
     // No-Argument Constructor
@@ -13,7 +12,6 @@ public class Customer extends Human
         this.abilityToBuyRange = abilityToBuyRange;
     }
 
-    // Getters & Setters
     public double getAbilityToBuyRange() 
     {
         return abilityToBuyRange;

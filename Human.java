@@ -1,6 +1,5 @@
 public class Human 
 {
-    // Attributes
     private String name;
     private String email;
     private String address;
@@ -19,7 +18,6 @@ public class Human
         this.phoneNumber = phoneNumber;
     }
 
-    // Getters (Accessors) & Setters (Mutators)
     public String getName() 
     {
         return name;
