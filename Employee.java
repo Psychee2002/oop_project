@@ -14,7 +14,7 @@ public class Employee extends Human
         super(name, email, address, nationalIdentificationNumber, phoneNumber);
         this.shift = shift;
     }
-
+    //encapsulation
     public int getShift() 
     {
         return shift;

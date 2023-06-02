@@ -13,6 +13,7 @@ public class CustomerMenu
         {
             // display rentable cars
             System.out.println("Here is the Rental Menu: ");
+            //Rent Menu added by employee
             for (int i = 0; i < EmployeeMenu.carsCount; i++) {
                 Rental.displayRentalMenu(EmployeeMenu.model[i], EmployeeMenu.year[i], EmployeeMenu.color[i], EmployeeMenu.bodyStyle[i], EmployeeMenu.fuelType[i], EmployeeMenu.numberOfSeats[i] , EmployeeMenu.carsCount,i );
             }
@@ -31,6 +32,7 @@ public class CustomerMenu
         {
             // display Sale cars
             System.out.println("Here is the Sale Menu: ");
+            //Sale Menu added by employee
             for (int i = 0; i < EmployeeMenu.carsCount; i++) {
                 Sold.displaySaleMenu(EmployeeMenu.model[i], EmployeeMenu.year[i], EmployeeMenu.color[i], EmployeeMenu.bodyStyle[i], EmployeeMenu.fuelType[i], EmployeeMenu.numberOfSeats[i] , EmployeeMenu.carsCount,i );
             }
@@ -71,7 +73,7 @@ public class CustomerMenu
         System.out.println("Kindly select your Area to display the nearest pickup location");
         System.out.println("New Cairo/ Helioplis/ Nasr city");
         String Area = input.next();
-
+               //pickup location
                 if (Area.equals("New Cairo"))
                     System.out.println("Pick your car up from --Car agency New Cairo-- Near Dunkin doughnuts, New Cairo.");
                 else if (Area.equals("Helioplis"))
